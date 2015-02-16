@@ -131,7 +131,7 @@ MainWindow::resetBtnClicked()
 {
     QMessageBox::StandardButton btn;
     btn = QMessageBox::warning(this, "重新答题",
-                               "确认重新答题？之前的答题记录将被会清除！",
+                               "确认重新答题？之前的答题记录将会被清除！",
                                QMessageBox::Ok|QMessageBox::Cancel);
     if (btn != QMessageBox::Ok) {
         return;
@@ -156,7 +156,7 @@ MainWindow::loadQuestions()
     }
 
     /* load questions from ini file */
-    QSettings settings("questions.ini", QSettings::IniFormat);
+    QSettings settings(":/questions.ini", QSettings::IniFormat);
     settings.setIniCodec("UTF-8");
     QStringList groups = settings.childGroups();
     for (int i = 0; i < groups.size(); i++) {

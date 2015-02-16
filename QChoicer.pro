@@ -18,3 +18,6 @@ SOURCES += main.cpp\
 
 HEADERS  += MainWindow.h \
     Question.h
+
+RESOURCES += \
+    resource.qrc
