@@ -168,7 +168,13 @@ MainWindow::loadQuestions()
         qDebug() << q.options;
         qDebug() << q.answer;
     }
-    /* TODO: randomize question list */
+    /* randomize question list */
+    qsrand(QTime::currentTime().msec());
+    for (int i = 0; i < questionList.size() / 2; i++) {
+        int a = qrand() % questionList.size();
+        int b = qrand() % questionList.size();
+        questionList.swap(a, b);
+    }
     for (int i = 0; i < questionList.size(); i++) {
         QListWidgetItem *item = new QListWidgetItem();
         item->setText(QString("第%1题").arg(i + 1));

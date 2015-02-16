@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <algorithm>
 #include <QButtonGroup>
 #include <QGroupBox>
 #include <QHBoxLayout>
@@ -11,6 +12,7 @@
 #include <QPushButton>
 #include <QRadioButton>
 #include <QSettings>
+#include <QTime>
 #include <QVBoxLayout>
 #include <QDebug>
 
